@@ -1,0 +1,19 @@
+<!DOCTYPE >
+<html>
+<head>
+    <title>My School</title>
+</head>
+<body>
+    <h1>My School</h1>
+    <img src="https://www.ug.edu.gh/sites/default/files/ugbs_logo.png" alt="University Of Ghana Basic School Logo" width="200">
+    <p>My school is called <strong>University Of Ghana Basic School</strong>.</p>
+    <p><strong>Established:</strong> 1957</p>
+    <p><strong>Population:</strong> Over 1,200 students</p>
+    <p>It is located in <em>Legon, Ghana</em>.</p>
+    <p>The school has a <mark>beautiful campus</mark> and a <del>large playground</del>.</p>
+    <p>We offer various activities such as sports, music, drama, and science clubs.</p>
+    <p>The school is registered with the <strong>Ghana Education Service (GES)</strong>.</p>
+    <p>I love my school because it has a great <u>learning environment</u>.</p>
+    <p>My favorite subject is <sub>Mathematics</sub>.</p>
+    <p>Visit our website: <a href="https://www.ug.edu.gh/ugbs/" target="_blank">University Of Ghana Basic School</a></p>
+</body>
