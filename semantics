@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dog Facts - Semantic Home</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Dog Facts</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Dogs</a></li>
+                <li><a href="#facts">Dog Facts</a></li>
+                <li><a href="#media">Dog Media</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h2>About Dogs</h2>
+            <p>Dogs are domesticated mammals and are known as man's best friend. They belong to the species <em>Canis lupus familiaris</em>.</p>
+        </section>
+        <section id="facts">
+            <h2>Interesting Facts About Dogs</h2>
+            <ul>Dogs have an extraordinary sense of smell, up to 100,000 
+                <li>times better than humans.</li>
+                <li>There are over 340 different dog breeds worldwide.</li>
+                <li>Dogs can understand up to 250 words and gestures.</li>
+                <li>The Basenji dog is known as the "barkless dog" because it doesn't bark like other dogs.</li>
+                <li>Dogs have been human companions for over 14,000 years.Dogs have a sense of time but don’t understand the ‘concept’ of time. Unlike humans, dogs don’t have
+
+the ability to create actual measures of time, like the second, hour, and minute, and they don’t
+
+know how to read clocks. So, telling them ”I’ll be back in 15 minutes” won’t really do much, but we
+
+understand that you feel like you have to do it anyway! Dogs are capable of being trained based on
+
+past events, and can be taught to anticipate future events based on past experiences. Pavlov’s dogs
+
+are the perfect example of this.</li>
+            </ul>
+        </section>
+        <section id="media">
+            <h2>Dog Pictures and Videos</h2>
+            <figure>
+                <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=600&q=80" alt="A happy dog sitting on grass" width="400">
+                <figcaption>A happy dog enjoying the outdoors.</figcaption>
+            </figure>
+            <figure>
+                <video width="400" controls>
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <figcaption>A playful dog video.</figcaption>
+            </figure>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Dog Facts Home</p>
+    </footer>
+</body>
+</html>
