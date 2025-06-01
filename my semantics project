@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dog Facts - Semantic Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            background: #f7fafc;
+            color: #22223b;
+        }
+        header {
+            background: #4f8cff;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        header h1 {
+            font-family: inherit;
+            font-size: 1.5rem;
+            margin-bottom: 0.2rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        nav a {
+            color: inherit;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            max-width: 700px;
+            margin: 1.5rem auto;
+            background: none;
+            border-radius: 0;
+            box-shadow: none;
+            padding: 1.2rem 1rem;
+        }
+        section {
+            margin-bottom: 1.2rem;
+        }
+        h2 {
+            font-family: inherit;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            border-left: none;
+            padding-left: 0;
+        }
+        #facts ul {
+            padding-left: 1rem;
+            font-size: 0.98rem;
+        }
+        #facts li {
+            margin-bottom: 0.7rem;
+            line-height: 1.4;
+            position: relative;
+            padding-left: 1em;
+        }
+        #facts li::before {
+            content: "•";
+            color: inherit;
+            position: absolute;
+            left: 0;
+        }
+        figure {
+            margin: 1rem 0;
+            text-align: center;
+        }
+        img, video {
+            border-radius: 0;
+            box-shadow: none;
+            max-width: 100%;
+            height: auto;
+        }
+        figcaption {
+            margin-top: 0.4rem;
+            color: inherit;
+            font-style: italic;
+            font-size: 0.95rem;
+        }
+        footer {
+            background: none;
+            color: inherit;
+            text-align: center;
+            padding: 0.7rem 0;
+            font-size: 0.95rem;
+            border-radius: 0;
+            margin-top: 1.5rem;
+        }
+        @media (max-width: 600px) {
+            main {
+                padding: 0.7rem 0.3rem;
+            }
+            h2 {
+                font-size: 1rem;
+            }
+            header h1 {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dog Facts - Semantic Home</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Facts</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="intro">
+            <h2>Welcome!</h2>
+            <p>Discover amazing facts about dogs and enjoy our curated gallery.</p>
+        </section>
+        <section id="facts">
+            <h2>Dog Facts</h2>
+            <ul>
+                <li>Dogs have an extraordinary sense of smell.</li>
+                <li>There are over 340 different dog breeds worldwide.</li>
+                <li>Dogs can understand up to 250 words and gestures.</li>
+            </ul>
+        </section>
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <figure>
+                <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80" alt="Cute dog">
+                <figcaption>A happy dog enjoying the outdoors.</figcaption>
+            </figure>
+        </section>
+    </main>
+    <footer>
+    
+    </footer>
+</body>
+</html>
