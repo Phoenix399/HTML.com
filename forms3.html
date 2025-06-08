@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Forms In HTML</title>
+</head>
+<body>
+    <h1>Forms In HTML</h1>
+    <p>Forms are used to collect user input.</p>
+
+    <form>
+        <fieldset>
+            <legend><h2>Registration Form</h2></legend>
+
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname"><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+
+            <label>Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label><br>
+
+            <label for="country">Country:</label><br>
+            <select id="country" name="country">
+                <option value="usa">USA</option>
+                <option value="canada">Canada</option>
+                <option value="uk">UK</option>
+                <option value="ghana">Ghana</option>
+                <option value="other">Other</option>
+            </select><br>
+
+            <label for="dob">Date of Birth:</label><br>
+            <input type="date" id="dob" name="dob"><br>
+
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password"><br>
+
+            <label for="confirm_password">Confirm Password:</label><br>
+            <input type="password" id="confirm_password" name="confirm_password"><br>
+
+            <label for="favourite_color">Favourite Color:</label><br>
+            <input type="color" id="favourite_color" name="favourite_color"><br>
+
+            <label>Hobbies:</label><br>
+            <input type="checkbox" id="hobby1" name="hobbies" value="programming">
+            <label for="hobby1">Programming</label>
+            <input type="checkbox" id="hobby2" name="hobbies" value="music">
+            <label for="hobby2">Music</label>
+            <input type="checkbox" id="hobby3" name="hobbies" value="sports">
+            <label for="hobby3">Sports</label>
+            <input type="checkbox" id="hobby4" name="hobbies" value="reading">
+            <label for="hobby4">Reading</label><br>
+
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone"><br>
+
+            <label for="website">Personal Website:</label><br>
+            <input type="url" id="website" name="website"><br>
+
+            <label for="profile_pic">Profile Picture:</label><br>
+            <input type="file" id="profile_pic" name="profile_pic"><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+
+            <label for="newsletter">Subscribe to newsletter:</label>
+            <input type="checkbox" id="newsletter" name="newsletter"><br>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </fieldset>
+    </form>
+</body>
+</html>
