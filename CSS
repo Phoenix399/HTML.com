@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>INTRODUCTION TO CSS</title>
+    <!-- Internal CSS -->
+    <style>
+        .internal-css {
+            color: blue;
+        }
+        #unique-element {
+            font-weight: bold;
+            color: purple;
+        }
+        .group1, .group2 {
+            background-color: #f0f0f0;
+            padding: 5px;
+        }
+    </style>
+    <!-- External CSS would be linked like this: -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- This would be styled by external CSS if you had a separate file -->
+    <h2 class="external-css">External CSS (would be red if external CSS is linked)</h2>
+    <!-- This is styled by internal CSS above -->
+    <h3 class="internal-css">Internal CSS (blue)</h3>
+    <!-- This is styled by inline CSS below -->
+    <h4 style="color: orange;">Inline CSS (orange)</h4>
+    <p style="color: green;">This is an example of inline CSS (green).</p>
+    <p id="unique-element">This paragraph uses an ID selector (purple and bold).</p>
+    <div class="group1">This div uses the group selector (gray background).</div>
+    <span class="group2">This span also uses the group selector (gray background).</span>
+</body>
+</html>
