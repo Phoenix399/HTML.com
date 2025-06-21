@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Space Explorer in Advanced Selectors</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background: linear-gradient(135deg, #0f2027 0%, #2c5364 35%, #e61c1c 100%);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            transition: background 1s;
+        }
+        .topic-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            padding: 40px 10px 20px 10px;
+        }
+        .topic {
+            display: none;
+            opacity: 0;
+            transform: scale(0.97);
+            transition: opacity 0.6s, transform 0.6s;
+            max-width: 750px;
+            margin: 0 auto;
+        }
+        .topic.active {
+            display: block;
+            opacity: 1;
+            transform: scale(1);
+        }
+        .topic h2 {
+            color: #e61c1c;
+            margin-top: 30px;
+            text-align: center;
+            font-size: 2em;
+            letter-spacing: 1.5px;
+            transition: color 0.6s;
+        }
+        .topic ul, .topic ol {
+            background: rgba(0,0,0,0.45);
+            border-radius: 10px;
+            padding: 25px 30px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px 0 rgba(40,0,0,0.15);
+            font-size: 1.18em;
+            transition: background 0.6s, box-shadow 0.6s;
+        }
+        .topic p {
+            font-size: 1.18em;
+            margin: 16px 0;
+            text-align: justify;
+            transition: color 0.6s;
+        }
+        .topic a {
+            display: inline-block;
+            margin-top: 12px;
+            color: #e61c1c;
+            font-size: 1.2em;
+            font-weight: bold;
+            background: rgba(255,255,255,0.08);
+            padding: 6px 15px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background 0.4s, color 0.4s;
+        }
+        .topic a:hover {
+            background: #e61c1c;
+            color: #fff;
+            text-decoration: underline;
+        }
+        .topic-nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .topic-btn {
+            background: #222;
+            color: #e61c1c;
+            border: 2px solid #e61c1c;
+            border-radius: 6px;
+            padding: 8px 20px;
+            font-size: 1.08em;
+            font-family: inherit;
+            font-weight: bold;
+            cursor: pointer;
+            outline: none;
+            transition: background 0.4s, color 0.4s, border-color 0.4s, transform 0.2s;
+        }
+        .topic-btn:hover, .topic-btn.active {
+            background: #e61c1c;
+            color: #fff;
+            border-color: #fff;
+            transform: scale(1.06);
+        }
+        @media (max-width: 600px) {
+            .topic-container {
+                padding: 18px 2px 8px 2px;
+            }
+            .topic ul, .topic ol {
+                padding: 14px 6px;
+                font-size: 1em;
+            }
+            .topic h2 {
+                font-size: 1.3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="topic-container">
+        <h1>Welcome To The Space Explorer Club</h1>
+        <div class="topic-nav" id="topic-nav">
+            <button class="topic-btn active" data-topic="0">Overview</button>
+            <button class="topic-btn" data-topic="1">Milestones</button>
+            <button class="topic-btn" data-topic="2">Future Missions</button>
+        </div>
+        <div class="topic active">
+            <ol>
+                <li>Moon Missions</li>
+                <li>Mars Exploration</li>
+                <li>Asteroid Mining</li>
+                <li>Interstellar Travel</li>
+                <li>Black Hole Research</li>
+                <li>Exoplanet Discovery</li>
+                <li>Space Tourism</li>
+                <li>Satellite Technology</li>
+                <li>Cosmic Phenomena</li>
+                <li>Galactic Mapping</li>
+                <li>Space Debris Management</li>
+                <li>Spacecraft Design</li>
+                <li>Zero Gravity Experiments</li>
+                <li>Space Station Operations</li>
+                <li>Astrobiology Studies</li>
+            </ol>
+            <p>
+                Space exploration is the ongoing discovery and exploration of celestial structures in outer space by means of continuously evolving space technology. It has led to remarkable achievements, such as landing humans on the Moon, sending robotic probes to distant planets, and deploying telescopes that peer into the farthest reaches of the universe.<br><br>
+                The journey began with the launch of Sputnik 1 by the Soviet Union in 1957, marking the start of the space age. Since then, both crewed and uncrewed missions have expanded our understanding of the cosmos. The Apollo missions brought back lunar samples, while Mars rovers like Curiosity and Perseverance have been searching for signs of past life and studying the planet’s geology.<br><br>
+                Space exploration has also contributed to technological advancements on Earth, including satellite communications, GPS, and weather forecasting. International cooperation, such as the International Space Station (ISS), has fostered peaceful collaboration and scientific research in microgravity.<br><br>
+                Looking ahead, future missions aim to return humans to the Moon, send astronauts to Mars, and explore the icy moons of Jupiter and Saturn. The search for exoplanets and extraterrestrial life continues to inspire scientists and the public alike, driving innovation and expanding humanity’s horizons.
+            </p>
+        </div>
+        <div class="topic">
+            <h2>Space Exploration Milestones</h2>
+            <ul>
+                <li>1957: Launch of Sputnik 1</li>
+                <li>1969: Apollo 11 Moon landing</li>
+                <li>1976: Viking 1 lands on Mars</li>
+                <li>1990: Hubble Space Telescope launched</li>
+                <li>2004: Mars rovers Spirit and Opportunity land</li>
+                <li>2012: Curiosity rover lands on Mars</li>
+                <li>2020: Perseverance rover lands on Mars</li>
+                <li>2021: James Webb Space Telescope launched</li>
+            </ul>
+        </div>
+        <div class="topic">
+            <h2>Future Missions</h2>
+            <ul>
+                <li>Artemis program aims to return humans to the Moon by 2024</li>
+                <li>Mars Sample Return mission planned for the late 2020s</li>
+                <li>Europa Clipper mission to study Jupiter's moon Europa</li>
+                <li>James Webb Space Telescope will explore distant galaxies and exoplanets</li>
+                <li>Potential crewed missions to Mars in the 2030s</li>
+                <li>Development of space tourism and commercial spaceflight</li>
+                <li>Advancements in asteroid mining and resource utilization</li>
+                <li><a href="https://www.nasa.gov/" target="_blank">Learn more about NASA's space exploration efforts</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        // Topic navigation logic
+        const navBtns = document.querySelectorAll('.topic-btn');
+        const topics = document.querySelectorAll('.topic');
+        navBtns.forEach((btn, idx) => {
+            btn.addEventListener('mouseover', () => {
+                // Remove "active" from all buttons and topics
+                navBtns.forEach(btn2 => btn2.classList.remove('active'));
+                topics.forEach(topic => topic.classList.remove('active'));
+                // Add "active" to hovered button and corresponding topic
+                btn.classList.add('active');
+                topics[idx].classList.add('active');
+            });
+        });
+        // Optionally, add keyboard navigation or click as fallback
+        navBtns.forEach((btn, idx) => {
+            btn.addEventListener('click', () => {
+                navBtns.forEach(btn2 => btn2.classList.remove('active'));
+                topics.forEach(topic => topic.classList.remove('active'));
+                btn.classList.add('active');
+                topics[idx].classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
