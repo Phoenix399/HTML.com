@@ -1,0 +1,79 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+    color: blue;
+    margin: 20px;
+    padding: 20px
+}
+h1{
+    color: #e61c1c;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+/* Attribute selector */
+a {
+    color: #e61c1c;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+a:hover {
+    color: #e41515;
+    text-decoration: underline;
+}
+/*child selector*/
+ul > li {
+    color: #e61c1c;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+/*nth-child selector*/
+ul li:nth-child(2n) {
+    color: #e41515;
+    font-size: 1.2em;
+    font-weight: normal;
+}
+/*sibling selector*/
+h1+ p {
+     background-color: black;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+}
+/* :not Pseudo-class  */
+p:not(.myclass) {
+    color: #e61c1c;
+    font-size: 1.2em;
+    font-weight: normal;
+}
+/* ::before Pseudo-element */
+ul li::before{
+    content: " 🚀";
+    color: #e61c1c;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-right: 5px;}
+    /* ::after Pseudo-element */
+    a::after {
+        content: " 🌌";
+        color: #e61c1c;
+        font-weight: bold;
+        font-size: 1.2em;
+        margin-left: 5px;
+    }
+    /* :first-child Pseudo-class */
+    ul li:first-child {
+        color: #e61c1c;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+    /*::first-letter Pseudo-element */
+p::first-letter {
+    color: #e61c1c;
+    font-size: 2em;
+    font-weight: bold;
+    margin-right: 5px;
+}
+    
