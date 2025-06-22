@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phoenix Search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: linear-gradient(120deg, #232526 0%, #414345 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 60px auto 0 auto;
+            padding: 32px;
+            background: rgba(30, 30, 40, 0.96);
+            border-radius: 18px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            text-align: center;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 24px;
+            letter-spacing: 2px;
+            background: linear-gradient(90deg, #ff9d2f 40%, #ff6126 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .search-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 36px;
+        }
+
+        .search-box {
+            width: 65%;
+            padding: 12px 16px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+            background: #2d2d40;
+            color: #fff;
+            transition: box-shadow 0.2s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .search-box:focus {
+            box-shadow: 0 0 0 2px #ff9d2f;
+        }
+
+        .search-btn {
+            padding: 12px 26px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            background: linear-gradient(90deg, #ff9d2f 40%, #ff6126 100%);
+            color: #fff;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .search-btn:hover {
+            background: linear-gradient(90deg, #ff6126 10%, #ff9d2f 90%);
+        }
+
+        .models-section {
+            margin-top: 40px;
+        }
+
+        .models-section h2 {
+            font-size: 1.3rem;
+            color: #ffab4a;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .models-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 22px;
+        }
+
+        .model-card {
+            background: rgba(40, 40, 55, 0.98);
+            border: 2px solid #ff9d2f;
+            border-radius: 12px;
+            padding: 16px 18px;
+            width: 165px;
+            box-shadow: 0 2px 12px rgba(255, 157, 47, 0.08);
+            transition: transform 0.13s, box-shadow 0.13s;
+        }
+
+        .model-card:hover {
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 4px 24px rgba(255, 157, 47, 0.18);
+            border-color: #ff6126;
+        }
+
+        .model-card h3 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+            background: linear-gradient(90deg, #ff9d2f 40%, #ff6126 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .model-card p {
+            margin: 0;
+            color: #f7e0c6;
+            font-size: 0.98rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Phoenix Search</h1>
+        <form class="search-form" onsubmit="event.preventDefault();">
+            <input type="text" class="search-box" placeholder="Search with Phoenix...">
+            <button type="submit" class="search-btn">Search</button>
+        </form>
+        <div class="models-section">
+            <h2>Choose Your Phoenix Model</h2>
+            <div class="models-list">
+                <div class="model-card">
+                    <h3>Phoenix-1</h3>
+                    <p>General purpose, fast and accurate.</p>
+                </div>
+                <div class="model-card">
+                    <h3>Phoenix-2</h3>
+                    <p>Creative search, best for brainstorming and ideas.</p>
+                </div>
+                <div class="model-card">
+                    <h3>Phoenix-3</h3>
+                    <p>Technical queries, code and engineering focused.</p>
+                </div>
+                <div class="model-card">
+                    <h3>Phoenix-4</h3>
+                    <p>Research assistant, best for articles and papers.</p>
+                </div>
+                <div class="model-card">
+                    <h3>Phoenix-5</h3>
+                    <p>Concise and fast, for quick lookups and facts.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
