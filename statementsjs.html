@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Introduction to Statements</title>
+</head>
+<body>
+    <h1>Understanding Statements in JavaScript</h1>
+    <p>Statements are the instructions that a JavaScript engine can execute. They can be simple or complex, and they control the flow of execution in a program.</p>
+    <p id="output"></p>
+
+    <script>
+        // Variable declaration statement
+        let number = 5;
+
+        // Conditional statement
+        let message;
+        if (number > 0) {
+            message = "The number is positive.";
+        } else if (number < 0) {
+            message = "The number is negative.";
+        } else {
+            message = "The number is zero.";
+        }
+
+        // Loop statement
+        let countText = "Counting from 1 to 5: ";
+        for (let i = 1; i <= 5; i++) {
+            countText += i + " ";
+        }
+
+        // Function declaration and call
+        function greet(name) {
+            return `Hello, ${name}!`;
+        }
+
+        const greeting = greet("Student");
+
+        // Output all results
+        document.getElementById("output").innerHTML = `
+            ${message}<br>
+            ${countText}<br>
+            ${greeting}
+        `;
+    </script>
+</body>
+</html>
