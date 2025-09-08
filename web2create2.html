@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Portfolio</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <style>
+    /* Portfolio Section Styling */
+    #portfolio {
+      padding: 60px 0;
+      background: linear-gradient(135deg, white, black);
+      color: #fff;
+    }
+    #portfolio h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    .portfolio-item {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 15px;
+      overflow: hidden;
+      background: #fff;
+      color: #000;
+    }
+    .portfolio-item img {
+      width: 100%;          
+      height: 250px;        
+      object-fit: cover;    
+      display: block;
+    }
+    .portfolio-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+    .portfolio-caption {
+      padding: 15px;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      text-align: center;
+    }
+    .portfolio-caption h5 {
+      margin-bottom: 10px;
+    }
+    /* Black & White Buttons */
+    .btn-custom {
+      margin-top: 10px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      padding: 6px 15px;
+      color: #000;
+      border: 2px solid #000;
+      background: #fff;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+    .btn-custom:hover {
+      background: #000;
+      color: #fff;
+    }
+    /* Centered bottom button */
+    .portfolio-bottom-btn {
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <div class="container">
+      <h2>Our Portfolio</h2>
+      <div class="row">
+        
+        <div class="col-md-4 mb-4">
+          <div class="portfolio-item">
+            <img src="dish.png" alt="Dish 1">
+            <div class="portfolio-caption">
+              <h5>Signature Dish</h5>
+              <p>A classic taste loved by our customers.</p>
+              <a href="#" class="btn btn-custom">View Dish</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="portfolio-item">
+            <img src="resturant.png" alt="Interior">
+            <div class="portfolio-caption">
+              <h5>Our Ambience</h5>
+              <p>Warm and welcoming environment.</p>
+              <a href="#" class="btn btn-custom">View Interior</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="portfolio-item">
+            <img src="chef.png" alt="Chef">
+            <div class="portfolio-caption">
+              <h5>Our Chefs</h5>
+              <p>Talented chefs bringing creativity to your plate.</p>
+              <a href="#" class="btn btn-custom">Meet Chefs</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Big centered button -->
+      <div class="portfolio-bottom-btn">
+        <a href="#" class="btn btn-custom btn-lg">See More Portfolio</a>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
