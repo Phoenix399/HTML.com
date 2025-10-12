@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Bank App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7fa;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    input, select, button {
+      padding: 8px;
+      margin: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+    }
+
+    li {
+      padding: 5px 0;
+      border-bottom: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>💰 Simple Bank App</h1>
+    <h2 id="balance">Balance: GHS 0.00</h2>
+    <p>Income: GHS <span id="income">0.00</span> | Expense: GHS <span id="expense">0.00</span></p>
+
+    <form id="form">
+      <input type="text" id="desc" placeholder="Description" required />
+      <input type="number" id="amount" placeholder="Amount" required />
+      <select id="type">
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+      <button type="submit">Add</button>
+    </form>
+
+    <h3>Transactions</h3>
+    <ul id="list"></ul>
+  </div>
+
+  <script>
+    const form = document.getElementById('form');
+    const list = document.getElementById('list');
+    const balanceEl = document.getElementById('balance');
+    const incomeEl = document.getElementById('income');
+    const expenseEl = document.getElementById('expense');
+
+    let transactions = [];
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const desc = document.getElementById('desc').value.trim();
+      const amount = parseFloat(document.getElementById('amount').value);
+      const type = document.getElementById('type').value;
+
+      if (!desc || isNaN(amount)) return;
+
+      const transaction = { id: Date.now(), desc, amount, type };
+      transactions.unshift(transaction);
+      updateDisplay();
+      form.reset();
+    });
+
+    function updateDisplay() {
+      list.innerHTML = '';
+      let income = 0, expense = 0;
+
+      transactions.forEach(t => {
+        const li = document.createElement('li');
+        li.textContent = `${t.desc} - GHS ${t.amount.toFixed(2)} (${t.type})`;
+        list.appendChild(li);
+
+        if (t.type === 'income') income += t.amount;
+        else expense += t.amount;
+      });
+
+      const balance = income - expense;
+      incomeEl.textContent = income.toFixed(2);
+      expenseEl.textContent = expense.toFixed(2);
+      balanceEl.textContent = `Balance: GHS ${balance.toFixed(2)}`;
+    }
+  </script>
+</body>
+</html>
